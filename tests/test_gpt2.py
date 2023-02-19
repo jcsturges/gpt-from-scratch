@@ -12,3 +12,16 @@ from gpt_from_scratch import gpt2
 )
 def test_gelu(test_input, expected):
     assert gpt2.gelu(test_input) == expected
+
+
+@pytest.mark.parametrize(
+    "test_input, expected",
+    [
+        (-123, 1.0),
+        (0.023, 1.0),
+        (1, 1.0),
+        (3, 1.0),
+    ],
+)
+def test_softmax(test_input, expected):
+    assert gpt2.softmax(test_input) == expected
