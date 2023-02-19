@@ -18,6 +18,12 @@ def layer_norm(x, g, b, eps: float = 1e-5):
 
 
 def linear(x, w, b):  # [m, in], [in, out], [out] -> [m, out]
+    print("=> X")
+    print(x)
+    print("=> W")
+    print(w)
+    print("=> B")
+    print(b)
     return x @ w + b
 
 
